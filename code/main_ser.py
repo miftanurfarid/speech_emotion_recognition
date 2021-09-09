@@ -3,14 +3,14 @@
 """
 Created on Thu Sep  9 22:32:14 2021
 
-@author: kerja praktik speech emotion recognition
+@author: mini project speech emotion recognition untuk kerja praktik di lab itk
 """
 
 # import library yang dibutuhkan
 
 import librosa
 import soundfile
-import os, glob, pickle
+import os, glob
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
