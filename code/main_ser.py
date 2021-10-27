@@ -54,11 +54,12 @@ observed_emotions=['calm', 'happy', 'fearful', 'disgust']
 def load_data(test_size=0.2):
     x,y=[],[]
     for file in glob.glob("../data/speech-emotion-recognition-ravdess-data/Actor_*/*.wav"):
+        print(file)
         file_name = os.path.basename(file)
         emotion   = emotions[file_name.split("-")[2]]
         if emotion not in observed_emotions:
             continue
-        feature = extract_feature(file, mfcc=True, chroma=True, mel=True)
+        feature = extract_feature(file, mfcc=True, chroma=True, mel=False)
         x.append(feature)
         y.append(emotion)
     return train_test_split(np.array(x), y, test_size=test_size, random_state=9)
