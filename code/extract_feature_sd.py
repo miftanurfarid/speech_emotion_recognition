@@ -1,4 +1,4 @@
-# extract_feature.py: to extract spectral features
+# extract_feature_sd.py: to extract spectral features for speaker dependent
 
 import glob
 import os
@@ -48,5 +48,5 @@ for file in files:
     feat.append(feat_i)
     lab.append(int(lab_i)-1)  # make labels start from 0
 
-np.save(data_path+'/x.npy', feat)
-np.save(data_path+'/y.npy', lab)
+np.save(data_path + '/x.npy', feat)
+np.save(data_path + '/y.npy', lab)
