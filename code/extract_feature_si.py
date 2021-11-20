@@ -9,7 +9,6 @@ data_path = '../data/song' # choose song or speech
 files = glob.glob(os.path.join(data_path + '/*/', '*.wav'))
 files.sort()
 
-
 # function to extract feature
 def extract_feature(file_name):
     X, sample_rate = librosa.load(file_name, sr=None)
@@ -36,7 +35,6 @@ def extract_feature(file_name):
     return (mfcc, chroma, mel, contrast, tonnetz,
             mfcc_std, chroma_std, mel_std, contrast_std, tonnetz_std)
 
-
 # create empty list to store features and labels
 feat_train = []
 feat_test = []
@@ -45,7 +43,7 @@ lab_test = []
 
 # iterate over all files
 for file in files:
-    print("processing ...", file)
+    print("Extracting features from ", file)
     feat_i = np.hstack(extract_feature(file))
     lab_i = os.path.basename(file).split('-')[2]
     # create speaker independent split
