@@ -60,7 +60,6 @@ hist = model.fit(x_train,
 
 # evaluate the model on test partition
 evaluate = model.evaluate(x_test, y_test, batch_size=16)
-
 print("Loss={:.6f}, Accuracy={:.6f}".format(evaluate[0],evaluate[1]))
 
 # plot accuracy

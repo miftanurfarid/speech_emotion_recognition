@@ -1,4 +1,4 @@
-# mlp_sd.py: emotion recognition using multilayer perceptron with speaker dependent
+# mlp_sd.py: emotion recognition using multilayer perceptron with speaker independent
 
 import numpy as np
 import tensorflow as tf
@@ -59,7 +59,6 @@ hist = model.fit(x_train,
 
 # evaluate the model on test partition
 evaluate = model.evaluate(x_test, y_test, batch_size=16)
-
 print("Loss={:.6f}, Accuracy={:.6f}".format(evaluate[0],evaluate[1]))
 
 # plot accuracy
