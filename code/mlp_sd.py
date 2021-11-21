@@ -47,7 +47,7 @@ model = model_dense()
 print(model.summary())
 
 # plot model
-tf.keras.utils.plot_model(model,'mlp_model.pdf',show_shapes=True)
+tf.keras.utils.plot_model(model,'mlp_model_sd.pdf',show_shapes=True)
 
 # train the model
 hist = model.fit(x_train, 
@@ -58,11 +58,13 @@ hist = model.fit(x_train,
                  validation_split=0.1,
                  batch_size=16)
 
+# evaluate the model on test partition
 evaluate = model.evaluate(x_test, y_test, batch_size=16)
 
 print("Loss={:.6f}, Accuracy={:.6f}".format(evaluate[0],evaluate[1]))
 
 # plot accuracy
+plt.figure()
 plt.plot(hist.history['accuracy'])
 plt.plot(hist.history['val_accuracy'])
 plt.grid()
