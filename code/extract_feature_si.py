@@ -55,7 +55,7 @@ for file in files:
         lab_train.append(int(lab_i)-1)  # make labels start from 0
 
 # save as npy files
-np.save(data_path + 'x_train.npy', feat_train)
-np.save(data_path + 'x_test.npy', feat_test)
-np.save(data_path + 'y_train.npy', lab_train)
-np.save(data_path + 'y_test.npy', lab_test)
+np.save(data_path + '/x_train.npy', feat_train)
+np.save(data_path + '/x_test.npy', feat_test)
+np.save(data_path + '/y_train.npy', lab_train)
+np.save(data_path + '/y_test.npy', lab_test)
