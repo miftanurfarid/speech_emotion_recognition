@@ -1,2 +1,5 @@
 *.mp4
 *.zip
+*.svg
+cnn_model_sd_speech.pdf
+code/.ipynb_checkpoints/cnn_sd_speech-checkpoint.ipynb
