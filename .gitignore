@@ -3,3 +3,5 @@
 *.svg
 cnn_model_sd_speech.pdf
 code/.ipynb_checkpoints/cnn_sd_speech-checkpoint.ipynb
+code/.ipynb_checkpoints/extract_feature_si-checkpoint.ipynb
+code/.ipynb_checkpoints/extract_feature_sd-checkpoint.ipynb
